@@ -41,9 +41,9 @@ jobs:
           pip install cython virtualenv
           pip install buildozer
 
-      - name: Clean Buildozer state
+      - name: Build APK (debug)
         run: |
-          rm -rf ~/.buildozer
+          yes | buildozer -v android debug
 
       - name: Build APK (debug)
         run: |
